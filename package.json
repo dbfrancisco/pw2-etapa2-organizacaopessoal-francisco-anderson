@@ -1,0 +1,22 @@
+{
+  "name": "pw2-etapa2-projetostarefas-francisco",
+  "version": "1.0.0",
+  "description": "API REST para organização pessoal de projetos e tarefas",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "keywords": [
+    "express",
+    "api",
+    "projetos",
+    "tarefas"
+  ],
+  "author": "Francisco Anderson",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
