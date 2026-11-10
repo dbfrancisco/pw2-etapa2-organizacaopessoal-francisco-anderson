@@ -1,0 +1,67 @@
+@baseUrl = http://localhost:3000
+
+### Projetos
+GET {{baseUrl}}/projetos
+
+###
+GET {{baseUrl}}/projetos/4
+
+###
+POST {{baseUrl}}/projetos
+Content-Type: application/json
+
+{
+  "nome": "Novo projeto",
+  "descricao": "Descrição do projeto",
+  "status": "Em andamento"
+}
+
+###
+PUT {{baseUrl}}/projetos/4
+Content-Type: application/json
+
+{
+  "nome": "Projeto de Auditoria e Segurança da Informação",
+  "descricao": "Criptografia Moderna",
+  "status": "Pendente"
+}
+
+###
+DELETE {{baseUrl}}/projetos/5
+
+### Tarefas
+GET {{baseUrl}}/tarefas
+
+###
+GET {{baseUrl}}/tarefas?projetoId=1&concluida=false
+
+###
+GET {{baseUrl}}/tarefas/1
+
+###
+POST {{baseUrl}}/tarefas
+Content-Type: application/json
+
+{
+  "titulo": "Nova tarefa",
+  "descricao": "Detalhes da tarefa",
+  "concluida": false,
+  "projetoId": 5
+}
+
+###
+PUT {{baseUrl}}/tarefas/5
+Content-Type: application/json
+
+{
+  "titulo": "test",
+  "descricao": "test",
+  "concluida": false,
+  "projetoId": 1
+}
+
+###
+DELETE {{baseUrl}}/tarefas/5
+
+### Relacionamento
+GET {{baseUrl}}/projetos/1/tarefas
